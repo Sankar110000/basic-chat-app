@@ -1,0 +1,11 @@
+<% layout('layouts/boilerplate.ejs') -%>
+<body>
+    <h2>Edit your message</h2>
+    <form action="/chats/<%= chat._id %>?_method=put" method="POST">
+        <h4>Sender: <input type="text" name="from" value="<%= chat.from %>"></h4>
+        <h4>Reciever: <input type="text" name="to" value="<%= chat.to %>"></h4>
+        <h5>Edit message: <input type="text" name="msg" value="<%= chat.message %>"></h5>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

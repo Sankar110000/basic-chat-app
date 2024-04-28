@@ -1,0 +1,28 @@
+<% layout('layouts/boilerplate') -%>
+
+<body>
+    <form action="/chats/new">
+        <button>Create Chat</button>
+    </form>
+    <% for(chat of chats) { %>
+
+        <div class="container">
+            <div class="chat">
+                <p>from : <%= chat.from %>
+                </p>
+                <p>msg : <%= chat.message %>
+                </p>
+                <p>to : <%= chat.to %>
+                </p>
+                <form action="/chats/<%= chat._id %>?_method=delete" method="POST">
+                <button>Delete</button>
+                </form>
+                <form action="/chats/<%= chat._id %>" method="GET">
+                    <button>Update</button>
+                </form>
+            </div>
+        </div>
+        <% } %>
+</body>
+
+</html>

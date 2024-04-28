@@ -1,0 +1,25 @@
+body{
+    background-color: #212121;
+    color: white;
+    height: 100vh;
+    width: 100vh;
+}
+
+
+.chat{
+    height: 200px;
+    width: 300px;
+    background-color: rgb(90, 169, 120);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    color: #212121;
+    font-weight: 900;
+}
+
+button{
+    height: 30px;
+    width: 70px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
